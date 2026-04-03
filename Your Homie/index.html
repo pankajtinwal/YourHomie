@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Homie - Expert Services</title>
+    <meta name="description"
+        content="Expert Help. Friend Prices. Your Homie provides reliable experts for all your home service needs including electricians, plumbers, maids, and more.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0052FF',
+                        secondary: '#5E00FF',
+                        dark: '#0F172A',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-light text-dark font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="home" class="text-primary w-8 h-8"></i>
+                    <span class="font-extrabold text-2xl tracking-tight">Your Homie<span
+                            class="text-primary">.</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html"
+                        class="font-medium text-gray-600 hover:text-primary transition-colors">About</a>
+                    <a href="#services"
+                        class="font-medium text-gray-600 hover:text-primary transition-colors">Services</a>
+                    <a href="#contact" class="btn-primary px-6 py-2.5 rounded-full font-semibold shadow-lg">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3 shadow-xl">
+            <a href="about.html" class="block font-medium text-gray-600 hover:text-primary py-2">About</a>
+            <a href="#services" class="block font-medium text-gray-600 hover:text-primary py-2">Services</a>
+            <a href="#contact" class="block font-medium text-primary py-2">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background blob decoration -->
+        <div class="absolute top-0 right-0 -z-10 transform translate-x-1/2 -translate-y-1/2">
+            <div class="w-[800px] h-[800px] rounded-full bg-gradient-primary opacity-5 blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="reveal-left max-w-2xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-primary font-medium text-sm mb-6 border border-blue-100 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Available in your city
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6">
+                        Expert Help. <br />
+                        <span class="text-gradient">Friend Prices.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                        Your Homie is here. Get top-rated local professionals for any home service. Fast, reliable, and
+                        just a click away.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+                            class="btn-primary px-8 py-4 rounded-full font-bold text-center text-lg flex items-center justify-center gap-2 group">
+                            Book Now
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services"
+                            class="px-8 py-4 rounded-full font-bold text-center text-lg bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm">
+                            View Services
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 text-sm text-gray-500 font-medium">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center border-2 border-white shadow-sm">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                        </div>
+                        <p>Join <span class="text-dark font-bold text-base">2,500+</span> happy neighbors</p>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="reveal-right delay-200 relative lg:ml-auto">
+                    <div class="hero-img-container rounded-3xl overflow-hidden shadow-2xl relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 mix-blend-overlay">
+                        </div>
+                        <img src="assets/images/hero_bg.png" alt="Modern clean home"
+                            class="w-full object-cover h-[500px] lg:h-[650px] transform hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl glass-card flex items-center gap-4 z-20 animate-bounce"
+                        style="animation-duration: 3s;">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Guarantee</p>
+                            <p class="font-bold text-dark">100% Verified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Our Pros Section -->
+    <section id="pros" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center reveal-up">
+                <h4 class="text-3xl md:text-4xl font-extrabold mb-12">Meet Some of Our Pros</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="group relative overflow-hidden rounded-3xl shadow-lg bg-light isolate">
+                        <img src="assets/images/team_1.png" alt="Tech Expert"
+                            class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 z-10 transition-opacity">
+                            <h5 class="text-white text-xl font-bold">Rahul S.</h5>
+                            <p class="text-blue-300 font-medium">Master Technician</p>
+                            <div class="flex items-center gap-1 text-yellow-400 mt-2 text-sm font-semibold">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i> 4.9 (120 reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div
+                        class="group relative overflow-hidden rounded-3xl shadow-lg bg-light isolate reveal-up delay-100">
+                        <img src="assets/images/team_2.png" alt="Cleaning Expert"
+                            class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 z-10 transition-opacity">
+                            <h5 class="text-white text-xl font-bold">Deepali S.</h5>
+                            <p class="text-blue-300 font-medium">Cleaning Specialist</p>
+                            <div class="flex items-center gap-1 text-yellow-400 mt-2 text-sm font-semibold">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i> 5.0 (200 reviews)
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div
+                        class="group relative overflow-hidden rounded-3xl shadow-lg bg-light isolate reveal-up delay-200">
+                        <img src="assets/images/team_3.png" alt="Electrician"
+                            class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 z-10 transition-opacity">
+                            <h5 class="text-white text-xl font-bold">Aditya K.</h5>
+                            <p class="text-blue-300 font-medium">Certified Electrician</p>
+                            <div class="flex items-center gap-1 text-yellow-400 mt-2 text-sm font-semibold">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i> 4.8 (85 reviews)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-light relative">
+        <!-- Abstract shape -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <svg class="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/4 text-blue-50 w-full h-auto max-w-4xl opacity-50"
+                viewBox="0 0 100 100" preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,0 Q50,100 100,0 Z" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-up">
+                <div class="max-w-2xl">
+                    <h2 class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Our Services</h2>
+                    <h3 class="text-3xl md:text-5xl font-extrabold">Everything your home needs.</h3>
+                </div>
+                <p class="text-gray-500 font-medium mt-4 md:mt-0">Flat rates. No surprises.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Electrician</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Professional electrical repairs, wiring, lighting
+                        installations, and safety inspections by certified local experts.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up delay-100 border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="droplet" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Plumber</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Expert plumbing services for leak fixes, pipe
+                        installations, drain cleaning, and emergency water damage control.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up delay-200 border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Maid Service</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Thorough home cleaning, deep sanitization, and
+                        move-in/move-out tidying by meticulous cleaning specialists.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Tutor</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Personalized in-home tutoring across multiple subjects to
+                        help students excel academically and build confidence.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up delay-100 border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="scissors" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Barber</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Premium haircuts, styling, and grooming services provided
+                        conveniently in the comfort of your own home.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                    class="service-card bg-white p-8 rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] reveal-up delay-200 border border-gray-100">
+                    <div
+                        class="service-icon-wrapper w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Technician</h4>
+                    <p class="text-gray-600 mb-6 line-clamp-3">Appliance repair, AC servicing, and general technical
+                        troubleshooting by experienced, vetted mechanics.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold hover:text-dark transition-colors inline-flex items-center gap-1">
+                        Book Service <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark rounded-[3rem] overflow-hidden shadow-2xl relative reveal-up">
+                <div
+                    class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gradient-primary opacity-20 blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-500 opacity-20 blur-3xl pointer-events-none">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Contact Info -->
+                    <div class="p-12 lg:p-20 flex flex-col justify-center relative z-10 text-white">
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white text-gradient">Ready to get
+                            started?</h2>
+                        <p class="text-gray-300 text-lg mb-10">Fill out the form and we'll dispatch the perfect homie
+                            for the job within 24 hours.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="phone" class="text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 font-medium">Call Us Now</p>
+                                    <p class="text-lg font-bold">+91 98765 43210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                                    <i data-lucide="mail" class="text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 font-medium">Email Us</p>
+                                    <p class="text-lg font-bold">hello@yourhomie.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div
+                        class="bg-white p-12 lg:p-20 relative z-10 rounded-l-[3rem] lg:rounded-l-none lg:rounded-[3rem] shadow-[-10px_0_20px_rgba(0,0,0,0.1)]">
+                        <h3 class="text-2xl font-bold text-dark mb-8">Book a Service</h3>
+                        <form id="contact-form" class="space-y-6" novalidate>
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full
+                                    Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="custom-input w-full px-5 py-4 rounded-xl text-dark"
+                                    placeholder="Rahul Sharma">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone
+                                    Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="custom-input w-full px-5 py-4 rounded-xl text-dark"
+                                    placeholder="+91 98765 43210">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Select
+                                    Service</label>
+                                <select id="service" name="service"
+                                    class="custom-input w-full px-5 py-4 rounded-xl text-dark appearance-none">
+                                    <option value="" disabled selected>Choose what you need...</option>
+                                    <option value="electrician">Electrician</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="maid">Maid Service</option>
+                                    <option value="tutor">Tutor</option>
+                                    <option value="barber">Barber</option>
+                                    <option value="technician">Technician</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-16 lg:px-24 mt-[88px] text-gray-500">
+                                    <!-- custom select arrow -->
+                                    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="btn-primary w-full py-4 rounded-xl font-bold text-lg mt-4 shadow-lg group relative overflow-hidden">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    Confirm Booking <i data-lucide="check"
+                                        class="w-5 h-5 group-hover:scale-125 transition-transform"></i>
+                                </span>
+                            </button>
+                            <div id="form-message" class="text-center transition-all"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f5f5f5] pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-dark text-white p-2 rounded-lg">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-gray-900 leading-none">Your <br>Homie</span>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Investor Relations</a>
+                        </li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Terms & conditions</a>
+                        </li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Privacy policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Anti-discrimination
+                                policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- For customers -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">For customers</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Homie reviews</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Categories near you</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-dark transition-colors">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- For professionals -->
+                <div class="lg:col-span-1">
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">For professionals</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Register as a
+                                professional</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links & App Stores -->
+                <div class="lg:col-span-1">
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">Social links</h4>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/insta.jpg" alt="Instagram" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/linkedin.jpeg" alt="LinkedIn" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/youtube.jpeg" alt="YouTube" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/facebook.jpeg" alt="Facebook" class="w-full h-full object-cover">
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="inline-block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition-colors">
+                                <i data-lucide="apple" class="w-6 h-6 fill-current"></i>
+                                <div class="text-left">
+                                    <p class="text-[10px] leading-tight text-gray-300">Download on the</p>
+                                    <p class="text-sm font-semibold leading-tight">App Store</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="inline-block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition-colors">
+                                <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                                <div class="text-left">
+                                    <p class="text-[10px] leading-tight text-gray-300">GET IT ON</p>
+                                    <p class="text-sm font-semibold leading-tight">Google Play</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 text-xs text-gray-500">
+                <p>&copy; Copyright 2026 Your Homie Limited. All rights reserved. | CIN: L74140DL2014PLC274413</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Animation & Logic script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

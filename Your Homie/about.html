@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Homie</title>
+    <meta name="description"
+        content="Learn more about Your Homie's company vision and meet the co-founders behind the expert home services platform.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0052FF',
+                        secondary: '#5E00FF',
+                        dark: '#0F172A',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-light text-dark font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i data-lucide="home" class="text-primary w-8 h-8"></i>
+                    <span class="font-extrabold text-2xl tracking-tight">Your Homie<span
+                            class="text-primary">.</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="index.html#services"
+                        class="font-medium text-gray-600 hover:text-primary transition-colors">Services</a>
+                    <a href="index.html#contact"
+                        class="btn-primary px-6 py-2.5 rounded-full font-semibold shadow-lg">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3 shadow-xl">
+            <a href="index.html" class="block font-medium text-gray-600 hover:text-primary py-2">Home</a>
+            <a href="index.html#services" class="block font-medium text-gray-600 hover:text-primary py-2">Services</a>
+            <a href="index.html#contact" class="block font-medium text-primary py-2">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Company Vision Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-24 overflow-hidden bg-white">
+        <!-- Background blob decoration -->
+        <div class="absolute top-0 left-0 -z-10 transform -translate-x-1/2 -translate-y-1/2">
+            <div class="w-[600px] h-[600px] rounded-full bg-gradient-primary opacity-5 blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="reveal-up">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-primary font-medium text-sm mb-6 border border-blue-100 shadow-sm">
+                    Our Story
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.2] mb-8">
+                    Empowering local professionals to build <span class="text-gradient">better communities.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                    Our vision is to build an ecosystem where local home service professionals can thrive, establish
+                    meaningful client relationships, and deliver world-class service without platform friction.
+                </p>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    We believe that finding a reliable plumber, maid, or electrician should be as easy as sending a text
+                    to a friend. Your Homie is designed to be exactly that—your friendly neighbor who always knows an
+                    expert.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet The Founders Section -->
+    <section class="py-24 bg-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                <h2 class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Leadership</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold">Meet the Founders.</h3>
+            </div>
+
+            <!-- Founders Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 reveal-up delay-200">
+
+                <!-- Founder 1 -->
+                <div
+                    class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05),0_10px_30px_-5px_rgba(0,0,0,0.02)] transition-transform duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="aspect-[4/5] bg-gray-100 overflow-hidden relative">
+                        <!-- User to overlay their own photo here later -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium z-0">
+                            Upload Photo Here</div>
+                        <img src="assets/images/Pankaj.jpeg" alt="Co-Founder & CEO"
+                            class="w-full h-full object-cover object-top relative z-10 transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 text-center">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Pankaj</h4>
+                        <p class="text-primary font-semibold text-sm tracking-wide uppercase mb-4">Co-Founder & CEO</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Pankaj is the visionary behind Your Homie. With experience in on-demand services and urban
+                            logistics, he handles company strategy, growth, and ensures our platform scales effectively
+                            to meet demand.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div
+                    class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05),0_10px_30px_-5px_rgba(0,0,0,0.02)] transition-transform duration-300 hover:-translate-y-2 border border-gray-100 delay-100">
+                    <div class="aspect-[4/5] bg-gray-100 overflow-hidden relative">
+                        <!-- User to overlay their own photo here later -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium z-0">
+                            Upload Photo Here</div>
+                        <img src="assets/images/Karan.jpeg" alt="Co-Founder & COO"
+                            class="w-full h-full object-cover object-top relative z-10 transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 text-center">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Karan</h4>
+                        <p class="text-primary font-semibold text-sm tracking-wide uppercase mb-4">Co-Founder & COO</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Karan oversees all operational pipelines. He is passionate about process optimization,
+                            quality assurance, and making sure every single homie we dispatch is fully vetted, highly
+                            trained, and professional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Founder 3 -->
+                <div
+                    class="group bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05),0_10px_30px_-5px_rgba(0,0,0,0.02)] transition-transform duration-300 hover:-translate-y-2 border border-gray-100 delay-200">
+                    <div class="aspect-[4/5] bg-gray-100 overflow-hidden relative">
+                        <!-- User to overlay their own photo here later -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-medium z-0">
+                            Upload Photo Here</div>
+                        <img src="assets/images/Sahil.jpeg" alt="Co-Founder & CTO"
+                            class="w-full h-full object-cover object-top relative z-10 transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 text-center">
+                        <h4 class="text-2xl font-bold text-dark mb-1">Sahil</h4>
+                        <p class="text-primary font-semibold text-sm tracking-wide uppercase mb-4">Co-Founder & CTO</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Sahil is the architect behind our seamless booking engine and professional tracking systems.
+                            He leads our engineering efforts to ensure high availability and fluid user interactions
+                            across all devices.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f5f5f5] pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-dark text-white p-2 rounded-lg">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-gray-900 leading-none">Your <br>Homie</span>
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Investor Relations</a>
+                        </li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Terms & conditions</a>
+                        </li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Privacy policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Anti-discrimination
+                                policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- For customers -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">For customers</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Homie reviews</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Categories near you</a>
+                        </li>
+                        <li><a href="index.html#contact" class="text-gray-600 hover:text-dark transition-colors">Contact
+                                us</a></li>
+                    </ul>
+                </div>
+
+                <!-- For professionals -->
+                <div class="lg:col-span-1">
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">For professionals</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-dark transition-colors">Register as a
+                                professional</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links & App Stores -->
+                <div class="lg:col-span-1">
+                    <h4 class="font-bold text-gray-900 text-lg mb-6">Social links</h4>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/insta.jpg" alt="Instagram" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/linkedin.jpeg" alt="LinkedIn" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/youtube.jpeg" alt="YouTube" class="w-full h-full object-cover">
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full overflow-hidden bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 hover:shadow-md transition-all">
+                            <img src="assets/images/facebook.jpeg" alt="Facebook" class="w-full h-full object-cover">
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="inline-block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition-colors">
+                                <i data-lucide="apple" class="w-6 h-6 fill-current"></i>
+                                <div class="text-left">
+                                    <p class="text-[10px] leading-tight text-gray-300">Download on the</p>
+                                    <p class="text-sm font-semibold leading-tight">App Store</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="inline-block">
+                            <div
+                                class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition-colors">
+                                <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                                <div class="text-left">
+                                    <p class="text-[10px] leading-tight text-gray-300">GET IT ON</p>
+                                    <p class="text-sm font-semibold leading-tight">Google Play</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 text-xs text-gray-500">
+                <p class="mb-2">* As on December 31, 2026</p>
+                <p>&copy; Copyright 2026 Your Homie Limited. All rights reserved. | CIN: L74140DL2014PLC274413</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Animation & Logic script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
